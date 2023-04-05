@@ -1,3 +1,3 @@
 # Lottery
 Lottery and draw
-readme edits version 
+readme edits version
