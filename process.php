@@ -43,7 +43,7 @@ if(isset($_POST['submit']) || isset($_POST['finish']) && isset($_POST['numbers']
 		if ($conn->query($sql) === TRUE) {
 			$error_message="New record created successfully";
 			$_SESSION['message']=$error_message;
-			echo "New record created successfully";
+			//echo "New record created successfully";
 			header('Location: index.php');
 			exit();
 		} else {
