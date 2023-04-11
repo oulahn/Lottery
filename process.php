@@ -44,6 +44,7 @@ if(isset($_POST['submit']) || isset($_POST['finish']) && isset($_POST['numbers']
 			$error_message="New record created successfully";
 			$_SESSION['message']=$error_message;
 			echo "New record created successfully";
+			exit();
 		} else {
 			echo "Error: " . $sql . "<br>" . $conn->error();
 		}
