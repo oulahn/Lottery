@@ -10,6 +10,7 @@ if(isset($_POST['submit']) || isset($_POST['finish']) && isset($_POST['numbers']
 	$username = $_POST['username'];
 	if($username=="" || empty($username)){
 	header("Location: index.php");
+	echo "H1";
 	exit();
 	}
 	if(count($selected_numbers) != 6) {
@@ -28,6 +29,7 @@ if(isset($_POST['submit']) || isset($_POST['finish']) && isset($_POST['numbers']
     // Username already exists, show an error message and redirect back to the index page
               $error_message="Username already exists!Please choose";
 			  $_SESSION['message']=$error_message;
+			  echo "H2";
               header('Location: index.php');
               exit();
 		 }
@@ -74,9 +76,11 @@ if(isset($_POST['finish'])) {
 	    
 	    unset($_POST['username']);
 	    header("Location: index.php");
+		echo "H3";
 	    exit;
 	}
 }
+echo "H4";
 header("Location: index.php");
 
 ?>
