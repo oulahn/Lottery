@@ -44,11 +44,12 @@ if(isset($_POST['submit']) || isset($_POST['finish']) && isset($_POST['numbers']
 			$error_message="New record created successfully";
 			$_SESSION['message']=$error_message;
 			echo "New record created successfully";
+			header('Location: index.php');
 			exit();
 		} else {
 			echo "Error: " . $sql . "<br>" . $conn->error();
 		}
-		header('Location: index.php');
+		//header('Location: index.php');
 		echo "H5";
 		exit();
 		// Add the selected numbers to the session and redirect to the winner page
