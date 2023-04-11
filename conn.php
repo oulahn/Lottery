@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "lottery";
+$servername = "database_server";
+$username = "oulahn";
+$password = "Password@123#";
+$dbname = "LottoDB";
 
 // Create a connection to the MySQL database
 $conn = new mysqli($servername, $username, $password, $dbname);
