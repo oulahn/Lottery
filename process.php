@@ -49,16 +49,35 @@ if(isset($_POST['submit']) || isset($_POST['finish']) && isset($_POST['numbers']
 	}
 	
 }
-
-unset($_POST['username']);
-unset($_POST['numbers']);
-unset($_post['submit']);
-
+/*
 if(isset($_POST['finish'])) {
-	header('Location: winner.php');
-	exit();
- }
-header("Location: index.php");
-?>
+	$username = $_POST['username'];
+	if ($username == "admin") {
+	    header('Location: winner.php');
+	    unset($_POST['username']);
+	    exit;
+ 	} else {
+	    
+	    unset($_POST['username']);
+	    header("Location: index.php");
+	    exit;
+	}
+	header("Location: index.php");
+}*/
+if(isset($_POST['finish'])) {
+	$username = $_POST['username'];
+	if ($username == "admin") {
+	    header('Location: winner.php');
+	    unset($_POST['username']);
+	    exit;
+ 	} else {
+	    
+	    unset($_POST['username']);
+	    header("Location: index.php");
+	    exit;
+	}
+}
+header("Location: index.php");
 
+?>
 
