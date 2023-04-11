@@ -2,7 +2,7 @@
 include 'conn.php';
 session_start(); 
 // Check if the user_tickets table exists
-/*if(!empty($_SESSION['message']))
+if(!empty($_SESSION['message']))
 {
 	echo 	$_SESSION['message'];
 }
@@ -73,7 +73,7 @@ $conn->close();
 // Array of numbers for the user to choose from
 $numbers = range(1, 42);
 session_destroy();
-*/
+
 ?>
 
 <!DOCTYPE html>
