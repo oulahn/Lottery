@@ -4,6 +4,13 @@ $username = "oulahn";
 $password = "Password@123#";
 $dbname = "LottoDB";
 
+/*$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "lottery";
+*/
+
+
 // Create a connection to the MySQL database
 $conn = new mysqli($servername, $username, $password, $dbname);
 

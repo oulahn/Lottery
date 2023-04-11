@@ -9,6 +9,8 @@ if(isset($_POST['submit']) || isset($_POST['finish']) && isset($_POST['numbers']
 	$selected_numbers = $_POST['numbers'];
 	$username = $_POST['username'];
 	if($username=="" || empty($username)){
+		$error_message = "Please enter your user name!";
+		$_SESSION['message']=$error_message;
 	header("Location: index.php");
 	echo "H1";
 	exit();
@@ -21,13 +23,15 @@ if(isset($_POST['submit']) || isset($_POST['finish']) && isset($_POST['numbers']
 			$user_number = count($_SESSION['lottery_numbers'])+1;
 			$message = "User $user_number, choose your numbers";
 		}*/
+		header('Location: index.php');
+		exit();
     }
 	 else {
 		$sql = "SELECT * FROM user_tickets WHERE username = '$username'";
          $result = $conn->query($sql);
          if ($result->num_rows > 0) {
     // Username already exists, show an error message and redirect back to the index page
-              $error_message="Username already exists!Please choose";
+              $error_message="Username already exists! Please choose another one .";
 			  $_SESSION['message']=$error_message;
 			  echo "H2";
               header('Location: index.php');
@@ -37,12 +41,15 @@ if(isset($_POST['submit']) || isset($_POST['finish']) && isset($_POST['numbers']
         $sql = "INSERT INTO user_tickets (username,userTicket) VALUES ('$username','$numbers_string')";
 		
 		if ($conn->query($sql) === TRUE) {
+			$error_message="New record created successfully";
+			$_SESSION['message']=$error_message;
 			echo "New record created successfully";
 		} else {
 			echo "Error: " . $sql . "<br>" . $conn->error();
 		}
 		header('Location: index.php');
 		echo "H5";
+		exit();
 		// Add the selected numbers to the session and redirect to the winner page
 		//$_SESSION['lottery_numbers'][] = $selected_numbers;
 		
@@ -83,7 +90,7 @@ if(isset($_POST['finish'])) {
 	}
 }
 echo "H4";
-//header("Location: index.php");
+header("Location: index.php");
 
 ?>
 
