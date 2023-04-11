@@ -82,7 +82,7 @@ if(isset($_POST['finish'])) {
 	}
 }
 echo "H4";
-header("Location: index.php");
+//header("Location: index.php");
 
 ?>
 
