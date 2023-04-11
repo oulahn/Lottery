@@ -42,6 +42,7 @@ if(isset($_POST['submit']) || isset($_POST['finish']) && isset($_POST['numbers']
 			echo "Error: " . $sql . "<br>" . $conn->error();
 		}
 		header('Location: index.php');
+		echo "H5";
 		// Add the selected numbers to the session and redirect to the winner page
 		//$_SESSION['lottery_numbers'][] = $selected_numbers;
 		
