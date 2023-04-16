@@ -1,5 +1,5 @@
 <?php
-$servername = "database_server";
+$servername = "database-server";
 $username = "oulahn";
 $password = "Password@123#";
 $dbname = "LottoDB";
