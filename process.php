@@ -33,7 +33,7 @@ if(isset($_POST['submit']) || isset($_POST['finish']) && isset($_POST['numbers']
     // Username already exists, show an error message and redirect back to the index page
               $error_message="Username already exists! Please choose another one .";
 			  $_SESSION['message']=$error_message;
-			  echo "H2";
+//			  echo "H2";
               header('Location: index.php');
               exit();
 		 }
@@ -92,7 +92,7 @@ if(isset($_POST['finish'])) {
 	}
 }
 echo "H4";
-header("Location: index.php");
+//header("Location: index.php");
 
 ?>
 
