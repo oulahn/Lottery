@@ -4,6 +4,7 @@ $username = "oulahn";
 $password = "Password@123#";
 $dbname = "LottoDB";
 
+
 /*$servername = "localhost";
 $username = "root";
 $password = "";
